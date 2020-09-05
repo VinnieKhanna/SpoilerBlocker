@@ -2,10 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {
     var checkPageButton = document.getElementById('checkPage');
     checkPageButton.addEventListener('click', function() {
 
-      document.body.innerHTML = "BLOCKED!";
-      chrome.tabs.executeScript({
-        file: 'content.js'
+      let keyword = document.getElementById("spoilerInputText").value;
+
+      if (keyword.length < 3) {
+        document.getElementById("resultText").innerHTML = "Input too small to parse! Please input size 3 or greater";
+      } else {
+        document.getElementById("resultText").innerHTML = "Blocked values related to '" + keyword + "'!";
+      }
+
+
+
+      chrome.tabs.executeScript({code: 'var config = \'' + keyword + '\''}, function(){
+        chrome.tabs.executeScript({file: "content.js"});
       });
+
+
 
     }, false);
     });
+
+
