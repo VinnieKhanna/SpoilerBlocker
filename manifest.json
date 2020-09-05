@@ -7,12 +7,9 @@
 
   "content_scripts": [
     {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "content.js"
-      ],
+      "matches": ["*://*/*"],
+      "all_frames": true,
+      "js": ["content.js"],
       "run_at": "document_end"
     }
   ],
