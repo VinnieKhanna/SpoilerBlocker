@@ -1,11 +1,25 @@
 <!doctype html>
 <html>
   <head>
-    <title>Spoiler Blocker?</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Spoiler Blocker</title>
     <script src="popup.js"></script>
+    <style>
+    body {
+      min-width:200px;
+      min-height: 250px;
+    }
+
+  </style>
   </head>
   <body>
-    <h1>Spoiler Blocker?</h1>
-    <button id="checkPage">Block Spoilers(!)</button>
+
+    <h1 style="text-align:center">Spoiler Blocker</h1>
+    <h2 style="text-align:center"> <form>
+      <label for="blocked">Blocked:</label><br>
+      <input type="text" id="blocked" name="blocked"><br>
+    </form>
+    </h2>
+    <button id="checkPage"> Block Spoilers!</button>
   </body>
 </html>
