@@ -3,22 +3,11 @@
 //     "matches": ["http://*/*", "https://*/*"]
 //   }]
 
-const elements = document.getElementsByTagName('*');
+const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, a')
 
-for (let i = 0; i < elements.length; i++) {
-    let element = elements[i];
-
-    for (let j = 0; j < element.childNodes.length; j++) {
-        let node = element.childNodes[j];
-
-        if (node.nodeType === 3) {
-            let text = node.nodeValue;
-            let replacedText = text.replace(/[Harry Potter]/gi, 'Hairy Potter');
-
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
-        }
+for (let i = 0; i < text.length; i++) {
+    if (text[i].includes('Harry Potter')) {
+        text[i].innerHTML = text[i].innerHTML.replace('Harry Potter', 'Hairy Potter')
     }
 }
 
