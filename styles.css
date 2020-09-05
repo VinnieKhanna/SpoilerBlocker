@@ -24,6 +24,8 @@ button{
 	top:1px;
 }
 
-.spoiler {
-	background-color: black;
-}
+<style>
+ body { background-color:black; }
+.spoiler { background-color:#000000; }
+p { background-color:#000000; }
+</style>
