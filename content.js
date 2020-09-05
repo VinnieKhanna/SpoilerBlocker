@@ -13,9 +13,9 @@ const text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, 
 for (let i = 0; i < text.length; i++) {
     if (text[i].innerHTML.includes('Harry Potter')) {
         let innerHTML = text[i].innerHTML;
-        let index = innerHTML.indexOf("Harry Potter");
+        let index = innerHTML.indexOf('Harry Potter');
         if (index >= 0) {
-            innerHTML = innerHTML.substring(0,index) + "<span class='spoiler'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+            innerHTML = innerHTML.substring(0,index) + "<span class='spoiler'>" + innerHTML.substring(index,index+'Harry Potter'.length) + "</span>" + innerHTML.substring(index + 'Harry Potter'.length);
             text[i].innerHTML = innerHTML;
         }
     }
