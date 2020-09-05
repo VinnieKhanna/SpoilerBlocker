@@ -13,7 +13,7 @@ for (let i = 0; i < elements.length; i++) {
 
         if (node.nodeType === 3) {
             let text = node.nodeValue;
-            let replacedText = text.replace(/[word or phrase to replace here]/gi, '[new word or phrase]');
+            let replacedText = text.replace(/[Harry Potter]/gi, 'Hairy Potter');
 
             if (replacedText !== text) {
                 element.replaceChild(document.createTextNode(replacedText), node);
