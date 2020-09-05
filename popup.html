@@ -2,24 +2,26 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
-    <title>Spoiler Blocker</title>
+    <title>Heads-Up</title>
     <script src="popup.js"></script>
-    <style>
-    body {
-      min-width:200px;
-      min-height: 250px;
-    }
 
-  </style>
   </head>
   <body>
-
-    <h1 style="text-align:center">Spoiler Blocker</h1>
-    <h2 style="text-align:center"> <form>
-      <label for="blocked">Blocked Phrase:</label><br>
-      <input type="text" id="blocked" name="blocked"><br>
-    </form>
-    </h2>
-    <button id="checkPage"> Block Spoilers!</button>
+    <div id="spoilerBlocker">
+      <div class = "header">
+        <h2>Heads-Up: Spoiler Blocker</h2>
+      </div>
+      <div class = "body">
+        <p>Don't want to be spoiled by Internet trolls? Just type in
+        what you want to block and we'll hide it from you!</p>
+        <hr>
+        <p>Number of Instances Blocked</p>
+        <h1>345</h1>
+        <hr>
+        <p>Keyword to Block: </p>
+        <input type="text" id="spoilerInputText">
+        <button type="button" onclick="">Block</button>
+      </div>
+    </div>
   </body>
 </html>

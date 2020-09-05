@@ -1,25 +1,5 @@
-button{
-    box-shadow: 3px 4px 0px 0px #8a2a21;
-	background-color:#f1ecec;
-	border-radius:18px;
-	border:3px solid #d02718;
-	display:inline-block;
-	cursor:pointer;
-	color:#e20707;
-	font-family:Arial;
-	font-size:10px;
-	font-weight:bold;
-	padding:7px 25px;
-	text-decoration:none;
-    text-shadow:0px 0px 0px #810e05;
-    margin: auto;
-    display: block;
+body {
+	width: 254px;
+	height: 314px;
 }
-.button:hover {
-	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-	background-color:#f24437;
-}
-.button:active {
-	position:relative;
-	top:1px;
-}
+
