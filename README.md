@@ -1,0 +1,2 @@
+# SpoilerBlocker
+Blocks spoilers!
