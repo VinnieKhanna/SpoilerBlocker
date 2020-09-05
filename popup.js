@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     checkPageButton.addEventListener('click', function() {
 
       document.body.innerHTML = "BLOCKED!";
+      chrome.tabs.executeScript({
+        file: 'content.js'
+      });
 
     }, false);
     });
