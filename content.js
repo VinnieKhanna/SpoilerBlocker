@@ -3,17 +3,17 @@
 //     "matches": ["http://*/*", "https://*/*"]
 //   }]
 
-var elements = document.getElementsByTagName('*');
+const elements = document.getElementsByTagName('*');
 
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
+for (let i = 0; i < elements.length; i++) {
+    let element = elements[i];
 
-    for (var j = 0; j < element.childNodes.length; j++) {
-        var node = element.childNodes[j];
+    for (let j = 0; j < element.childNodes.length; j++) {
+        let node = element.childNodes[j];
 
         if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace(/[word or phrase to replace here]/gi, '[new word or phrase]');
+            let text = node.nodeValue;
+            let replacedText = text.replace(/[word or phrase to replace here]/gi, '[new word or phrase]');
 
             if (replacedText !== text) {
                 element.replaceChild(document.createTextNode(replacedText), node);
