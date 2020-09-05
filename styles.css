@@ -1,5 +1,11 @@
 body {
 	width: 254px;
 	height: 314px;
+	background-color: #EDF2F4;
+}
+
+.header{
+	height: 53px;
+	background-color: #2B2D42;
 }
 
