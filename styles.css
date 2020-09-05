@@ -80,6 +80,7 @@ button{
 	margin-top: 5%;
 	display: inline-block;
 	box-shadow: 0 9px #999;
+	outline: none;
 }
 
 button:hover {

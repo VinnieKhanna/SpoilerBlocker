@@ -1,20 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
     var checkPageButton = document.getElementById('checkPage');
     checkPageButton.addEventListener('click', function() {
-      //console.log(document);
-      document.getElementById("newtext").innerHTML = "BLOCKED";
-      var searchText = document.getElementById("blocked").value;
-      var string = 'var config = \"' + searchText + '\"'
-      //console.log(string)
-      chrome.tabs.executeScript({
-        code: string
-    }, function() {
-        chrome.tabs.executeScript({file: 'content.js'}, function() {
-          document.getElementById("nextext").innerHTML = "Done";
-        });
-    });
+
+      let keyword = document.getElementById("spoilerInputText").value;
+
+      if (keyword.length < 3) {
+        document.getElementById("resultText").innerHTML = "Input too small to parse! Please input size 3 or greater";
+      } else {
+        document.getElementById("resultText").innerHTML = "Blocked values related to '" + keyword + "'!";
+      }
+
+
+
+      chrome.tabs.executeScript({code: 'var config = \'' + keyword + '\''}, function(){
+        chrome.tabs.executeScript({file: "content.js"});
+      });
+
+
 
     }, false);
-    console.log(document.body);
-    console.log(typeof(document.getElementsByTagName("body")[0].innerHTML));
-});
+    });
+
+
