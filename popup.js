@@ -12,19 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         document.getElementById("warnText").innerHTML = "Blocked values related to '" + keyword + "'!";
 
-        chrome.tabs.executeScript({code: 'var config = \'' + keyword + '\''}, function(){
-          chrome.tabs.executeScript({file: "content.js"});
+          chrome.tabs.executeScript({code: 'var config = \'' + keyword + '\''}, function(){
+          chrome.tabs.executeScript({file: "content.js"}, function() {
+             let number = 0;
+            chrome.storage.sync.get("instance", (result) => {document.getElementById('num').innerHTML = result.instance;});
+
+          })
         });
 
       }
-
-
-
-
-
-
-
     }, false);
     });
-
 
