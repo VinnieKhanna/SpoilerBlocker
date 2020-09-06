@@ -1,9 +1,12 @@
 {
     "manifest_version": 2,
 
-    "name": "Undecided DelhiHacks extension",
-    "description": "This extension will do something beautiful",
+    "name": "Heads-Up: Spoiler Blocker for Chrome",
+    "description": "Surf the web without worrying about the next spoiler.",
     "version": "1.0",
+    "icons": {
+      "128": "newIcon.png"
+    },
 
     "browser_action": {
      "default_icon": "newIcon.png",
