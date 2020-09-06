@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
       let keyword = document.getElementById("spoilerInputText").value;
       document.getElementById("spoilerInputText").value = '';
 
+      keyword = keyword.replace(/ +(?= )/g,'');
+
       if (keyword.length < 3) {
         document.getElementById("warnText").innerHTML = "Input too small to parse! Please input size 3 or greater";
       } else {
