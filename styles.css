@@ -1,6 +1,6 @@
 body {
 	width: 254px;
-	height: 314px;
+	height: 400px;
 	background-color: #EDF2F4;
 	margin:0 !important;
 	padding-top: 0;
@@ -90,4 +90,11 @@ button:active {
 	background-color: #BFBFBF;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
+}
+
+#warnText{
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	color: #D90429;
 }

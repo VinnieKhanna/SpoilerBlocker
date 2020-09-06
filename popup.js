@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("warnText").innerHTML = "Blocked values related to '" + keyword + "'!";
       }
 
-
+        $('button:button').click(
+            function(){
+                $('input:text').val('');
+            });
 
       chrome.tabs.executeScript({code: 'var config = \'' + keyword + '\''}, function(){
         chrome.tabs.executeScript({file: "content.js"});
