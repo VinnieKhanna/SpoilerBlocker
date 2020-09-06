@@ -9,16 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("warnText").innerHTML = "Input too small to parse! Please input size 3 or greater";
       } else {
         document.getElementById("warnText").innerHTML = "Blocked values related to '" + keyword + "'!";
+
+        chrome.tabs.executeScript({code: 'var config = \'' + keyword + '\''}, function(){
+          chrome.tabs.executeScript({file: "content.js"});
+        });
+
       }
 
-        $('button:button').click(
-            function(){
-                $('input:text').val('');
-            });
 
-      chrome.tabs.executeScript({code: 'var config = \'' + keyword + '\''}, function(){
-        chrome.tabs.executeScript({file: "content.js"});
-      });
+
+
 
 
 
