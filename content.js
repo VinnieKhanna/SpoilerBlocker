@@ -9,6 +9,6 @@ text = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, td, caption, span, 
 regex = new RegExp(searchText2, 'gim')
 for (let i = 0; i < text.length; i++) {
     if (text[i].innerHTML.includes(searchText2)) {
-        text[i].innerHTML = text[i].innerHTML.replace(regex, '<mark style="background-color>'+searchText2+'</mark>')
+        text[i].innerHTML = text[i].innerHTML.replace(regex, '<mark style="background-color: black">'+searchText2+'</mark>')
     }
 }
